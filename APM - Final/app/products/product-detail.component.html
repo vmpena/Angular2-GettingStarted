@@ -15,6 +15,14 @@
                     <div class='col-md-6'>{{product.productCode}}</div>
                 </div>
                 <div class='row'>
+                    <div class='col-md-3'>Manufacturer:</div>
+                    <div class='col-md-6'>{{product.manufacturer.name}}</div>
+                </div>
+                <div class='row'>
+                    <div class='col-md-3'>Country:</div>
+                    <div class='col-md-6'>{{product.manufacturer.country}}</div>
+                </div>
+                <div class='row'>
                     <div class='col-md-3'>Description:</div>
                     <div class='col-md-6'>{{product.description}}</div>
                 </div>
@@ -26,12 +34,23 @@
                     <div class='col-md-3'>Price:</div>
                     <div class='col-md-6'>{{product.price|currency:'USD':true}}</div>
                 </div>
+
                 <div class='row'>
                     <div class='col-md-3'>5 Star Rating:</div>
                     <div class='col-md-6'>
                         <ai-star [rating]='product.starRating'
                                 (ratingClicked)='onRatingClicked($event)'>
                         </ai-star>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col-md-3'><i>Distributors</i></div>
+                    <div class='col-md-6'></div>
+                </div>
+                <div *ngFor='let distributor of product.distributors'>
+                    <div class='row'>
+                        <div class='col-md-3'>{{distributor.country}}</div>
+                        <div class='col-md-6'>{{distributor.name}}  </div>
                     </div>
                 </div>
             </div>

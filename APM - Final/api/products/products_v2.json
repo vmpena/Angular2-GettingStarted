@@ -1,0 +1,100 @@
+[
+    {
+        "productId": 1,
+        "productName": "Leaf Rake",
+        "productCode": "GDN-0011",
+        "releaseDate": "October 19, 2017",
+        "description": "Leaf rake with 48-inch wooden handle.",
+        "price": 19.95,
+        "starRating": 3.2,
+        "imageUrl": "http://openclipart.org/image/300px/svg_to_png/26215/Anonymous_Leaf_Rake.png",
+        "manufacturer": {
+            "name": "Rakes International",
+            "country": "Canada"
+        },
+        "distributors":[
+            {
+                "name": "Oak Supply",
+                "country": "USA"
+            },
+            {
+                "name": "Highlands Garden Distributors",
+                "country": "Scotland"
+            },
+            {
+                "name": "Maple Gardens",
+                "country": "Canada"
+            }
+        ]
+    },
+    {
+        "productId": 2,
+        "productName": "Garden Cart",
+        "productCode": "GDN-0023",
+        "releaseDate": "July 28, 2017",
+        "description": "15 gallon capacity rolling garden cart",
+        "price": 32.99,
+        "starRating": 4.2,
+        "imageUrl": "http://openclipart.org/image/300px/svg_to_png/58471/garden_cart.png",
+        "manufacturer": {
+            "name": "Lundquist Garden Supplies",
+            "country": "Sweden"
+        }
+    },
+    {
+        "productId": 5,
+        "productName": "Hammer",
+        "productCode": "TBX-0048",
+        "releaseDate": "May 21, 2017",
+        "description": "Curved claw steel hammer",
+        "price": 8.9,
+        "starRating": 4.8,
+        "imageUrl": "http://openclipart.org/image/300px/svg_to_png/73/rejon_Hammer.png",
+        "manufacturer": {
+            "name": "Stern and Johnson",
+            "country": "Scotland"
+        }
+    },
+    {
+        "productId": 8,
+        "productName": "Electric Guitar",
+        "productCode": "TBX-0022",
+        "releaseDate": "May 15, 2017",
+        "description": "Single coil pickups, maple fretboard",
+        "price": 1999.95,
+        "starRating": 4.7,
+        "imageUrl": "https://openclipart.org/download/246263/160411_guitar.svg",
+        "manufacturer": {
+            "name": "Stern and Johnson",
+            "country": "Scotland"
+        },
+        "distributors":[
+            {
+                "name": "618 Music",
+                "country": "USA"
+            },
+            {
+                "name": "Cwmwl Wybren Distribution",
+                "country": "Wales"
+            },
+            {
+                "name": "Maple Music and Supply",
+                "country": "Canada"
+            }
+        ]
+    },
+    {
+        "productId": 10,
+        "productName": "Video Game Controller",
+        "productCode": "GMG-0042",
+        "releaseDate": "October 15, 2017",
+        "description": "Standard two-button video game controller",
+        "price": 35.95,
+        "starRating": 4.6,
+        "imageUrl": "http://openclipart.org/image/300px/svg_to_png/120337/xbox-controller_01.png",
+        "manufacturer": {
+            "name": "Kobayashi Maru",
+            "country": "Japan"
+        }
+    }
+]
