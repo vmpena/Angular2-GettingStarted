@@ -12,3 +12,50 @@ If you have any problems installing or running this code, please see the ["Angul
 If that does not resolve your issue, please post to the [discussion board for the course](https://app.pluralsight.com/library/courses/angular-2-getting-started-update/discussion)
 
 NOTE: The installation was tested using node v6.5.0 and npm 3.10.6.
+
+# Modified Data Types
+The underlying Product data type was made slightly more complex by adding both a custom data type and an array of custom data types. The Product interface now has a "manufacturer" property of type IManufacturer as well as a "distributors" property which is an array of IDistributor types. 
+```
+export interface IManufacturer{
+    name: string;
+    country: string;
+}
+
+export interface IDistributor{
+    name: string;
+    country: string;
+}
+
+export interface IProduct {
+    productId: number;
+    productName: string;
+    productCode: string;
+    releaseDate: string;
+    price: number;
+    description: string;
+    starRating: number;
+    imageUrl: string;
+    manufacturer: IManufacturer;
+    distributors: IDistributor[];
+}
+```
+The goal was to demonstrate how Angular properly maps incoming JSON data to a complex data type via the Observable .map function in the product-service component:
+```
+getProducts(): Observable<IProduct[]> {
+        return this._http.get(this._productUrl)
+            .map((response: Response) => <IProduct[]> response.json())
+    }
+```
+This allows for strong typing and Intellisense in the product-detail.component: 
+```
+{{product.manufacturer.name}}
+```
+or 
+```
+<div *ngFor='let distributor of product.distributors'>
+  <div class='row'>
+    <div class='col-md-3'>{{distributor.country}}</div>
+    <div class='col-md-6'>{{distributor.name}}  </div>
+  </div>
+</div>
+```
